@@ -26,7 +26,7 @@ int main()
     for(int i=0;i<size;i++)
     {
         int minIndex=i;
-        for(int j=i+1;j<size;j++)
+        for(int j=(i+1);j<size;j++)
         {
             if(arr[j]<arr[minIndex])
             {
@@ -35,7 +35,7 @@ int main()
         }
     }
     //printing the sorted Array
-    printf("\n-----------------After Sorting Data Array-------------------------------------\n");
+    printf("\n-----------------After Sorting Data Array-----------------\n");
     for (int i = 0; i < size; i++)
     {
         printf("%d\n", *(arr+i));
