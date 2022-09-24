@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #define SIZE 5
 
-int stack[SIZE];
+int stack[SIZE];  // array name is delceared as "stack"
 int tos = -1; // tos aka: top of stock
 
 void push(int item)
@@ -27,11 +27,25 @@ int pop()
     }
     else
     {
-        int t = stack[tos];
+        int t = stack[tos]; // first of all, put out that value and store it in some constant,then print that constant
         tos--;
         return t;
+        //printf("%d", &t);
     }
 }
+void peek()
+{
+    if (tos == -1)
+    {
+        printf("Top is empty!");
+    }
+    else
+    {
+        printf("Top most element is: ");
+        printf("%d", stack[tos]);
+    }
+}
+
 void display()
 {
     for (int i = tos; i >= 0; i--)
@@ -47,7 +61,7 @@ int main()
     while (1)
     {
 
-        printf("\nPress 1 to Push\n2 to Pop\n3 to Display\n4 to exit\n");
+        printf("\nPress 1 to Push\n2 to Pop\n3 to Display\n4 to see peek value\n5 to exit\n");
         scanf("%d", &n);
         printf("\t");
         switch (n)
@@ -66,8 +80,12 @@ int main()
         case 3:
             display();
             break;
-
+        
         case 4:
+            peek();
+            break;
+
+        case 5:
             exit(1);
             break;
 
