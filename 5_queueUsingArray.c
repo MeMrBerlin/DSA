@@ -1,47 +1,52 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 #define SIZE 5
 
-int items[SIZE],front=-1,rear=-1;
+int items[SIZE], front = -1, rear = -1; 
 
 void enQueue(int element)
+
 {
-    if(rear==SIZE-1)
+    if (rear == SIZE - 1)
     {
         printf("\nQueuue is full");
     }
     else
     {
-        if(front==-1)
+        if (front == -1)
         {
-            front=0;
+            front = 0;
         }
         rear++;
-        items[rear]=element;
+        items[rear] = element;
         printf("Data Insertion successful");
     }
 }
+
 int deQueue()
+
 {
-    if(front==-1)
+    if (front == -1)
     {
         printf("\nQueue Underflow!!");
         return -1;
     }
     else
     {
-        int temp=items[front];
+        int temp = items[front];
         front++;
-        if(front>rear)
+        if (front > rear)
         {
-            front=rear=-1;
+            front = rear = -1;
         }
         return temp;
     }
 }
+
 void display()
+
 {
-    if(rear==-1)
+    if (rear == -1)
     {
         printf("\nQueuue is empty");
     }
@@ -49,16 +54,16 @@ void display()
     {
         int i;
         printf("\nQuueue elements are as follows:\n");
-        for(int i=front;i<=rear;i++)
+        for (int i = front; i <= rear; i++)
         {
-            printf("%d\t",items[i]);
+            printf("%d\t", items[i]);
         }
         printf("\n");
     }
 }
 
-
 int main()
+
 {
     int n;
     while (1)
@@ -73,7 +78,7 @@ int main()
             scanf("%d", &num);
             enQueue(num);
             break;
-        
+
         case 2:
             deQueue();
             break;
@@ -89,6 +94,6 @@ int main()
             printf("Wrong choise!");
         }
     }
-    
+
     return 0;
 }
