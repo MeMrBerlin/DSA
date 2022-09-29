@@ -2,28 +2,24 @@
 #include <stdlib.h>
 #define SIZE 5
 
-int items[SIZE], front = -1, rear = -1;
+int items[SIZE], front = -1, rear = SIZE-1;
 
-void enQueue(int element)
+void push(int element)
 
 {
-    if (rear == SIZE - 1)
+    if (front == SIZE - 1)
     {
         printf("\nQueuue is full");
     }
     else
     {
-        if (front == -1)
-        {
-            front = 0;
-        }
-        rear++;
-        items[rear] = element;
+        front++;
+        items[front] = element;
         printf("Data Insertion successful");
     }
 }
 
-int deQueue()
+int pop()
 
 {
     if (front == -1)
@@ -33,8 +29,8 @@ int deQueue()
     }
     else
     {
-        int temp = items[rear];
-        rear--;
+        int temp = items[front];
+        front--;
         return temp;
     }
 }
@@ -42,7 +38,7 @@ int deQueue()
 void display()
 
 {
-    if (rear == -1)
+    if (front == -1)
     {
         printf("\nQueuue is empty");
     }
@@ -50,7 +46,7 @@ void display()
     {
         int i;
         printf("\nQuueue elements are as follows:\n");
-        for (int i = front; i <= rear; i++)
+        for (int i = 0; i <= front; i++)
         {
             printf("%d\t", items[i]);
         }
@@ -62,7 +58,7 @@ int main()
     int n;
     while (1)
     {
-        printf("ENTER 1 FOR ENQUEUE:\n 2 FOR DEQUEUE:\n 3 FOR DISPLAY:\n 4 FOR EXIT: \n");
+        printf("ENTER 1 FOR push:\n 2 FOR pop:\n 3 FOR DISPLAY:\n 4 FOR EXIT: \n");
         scanf("%d", &n);
         switch (n)
         {
@@ -70,11 +66,11 @@ int main()
             int num;
             printf("Enter the number: ");
             scanf("%d", &num);
-            enQueue(num);
+            push(num);
             break;
 
         case 2:
-            deQueue();
+            pop();
             break;
 
         case 3:
