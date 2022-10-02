@@ -52,7 +52,6 @@ void display()
     }
     else
     {
-        int i;
         printf("\nQuueue elements are as follows:\n");
         for (int i = front; i <= rear; i++)
         {
@@ -68,7 +67,7 @@ int main()
     int n;
     while (1)
     {
-        printf("ENTER 1 FOR ENQUEUE:\n 2 FOR DEQUEUE:\n 3 FOR DISPLAY:\n 4 FOR EXIT: \n");
+        printf("ENTER\n 1 FOR ENQUEUE:\n 2 FOR DEQUEUE:\n 3 FOR DISPLAY:\n 4 FOR EXIT: \n");
         scanf("%d", &n);
         switch (n)
         {
