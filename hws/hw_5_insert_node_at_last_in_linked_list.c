@@ -40,7 +40,7 @@ int main()
     nd *head;
     head = NULL;
     nd *newNode, *temp;
-    int ch;
+    int ch,i;
     while (1)
     {
         printf("ENTER\n 1 FOR INPUT: \n 2 FOR DISPLAY: \n 3 FOR INSERT NEW NODE AT FIRST:\n 4 FOR INSERT NODE AT LAST: ");
@@ -73,6 +73,7 @@ int main()
             {
                 printf("%d->", temp->data);
                 temp = temp->next;
+
             }
             printf("Null\n");
             printf("\n");

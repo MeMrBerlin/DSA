@@ -1,6 +1,8 @@
 // Partion Algo
+// For insertion sort
 
-// procedure_partion(A,p,r)
+// procedure_partion(A,p,r) 
+// p points first element and r points last element
 // {
 //     x=A[r]
 //     i=p-1
