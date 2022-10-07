@@ -61,10 +61,16 @@ int main()
     nd *head;
     head = NULL;
     nd *newNode, *temp;
-    int ch,i,count=0;
+    int ch, i, count = 0;
     while (1)
     {
-        printf("ENTER\n 1 FOR INPUT: \n 2 FOR DISPLAY: \n 3 FOR INSERT NEW NODE AT FIRST:\n 4 FOR INSERT NODE AT LAST: \n 5 FOR SEE THE LENGTH OF LIST: \n 6 FOR INSERT NODE IN BETWEEN NODES: ");
+        printf("ENTER \n");
+        printf("1 FOR INPUT: \n");
+        printf("2 FOR DISPLAY: \n");
+        printf("3 FOR INSERT NEW NODE AT FIRST: \n");
+        printf("4 FOR INSERT NODE AT LAST: \n");
+        printf("5 FOR SEE THE LENGTH OF LIST: \n");
+        printf("6 FOR INSERT NODE IN BETWEEN NODES: \n");
         scanf("%d", &ch);
         switch (ch)
         {
