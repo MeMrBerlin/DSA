@@ -7,7 +7,6 @@ void swap(int *a,int *b)
     temp=*a;
     *a=*b;
     *b=temp;
-
 }
 
 int main()
@@ -30,18 +29,17 @@ int main()
         {
             if(arr[j]<arr[minIndex])
             {
-                swap(arr+j,arr+minIndex);
+                swap((arr+j),(arr+minIndex));
             }
         }
     }
     //printing the sorted Array
     printf("\n-----------------After Sorting Data Array-----------------\n");
+    printf("\n");
     for (int i = 0; i < size; i++)
     {
         printf("%d\n", *(arr+i));
     }
     
-
-
     return 0;
 }

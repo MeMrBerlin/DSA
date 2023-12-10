@@ -1,6 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void swap(int *a, int *b)
+{
+    int temp;
+    temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
 int main()
 {
 
@@ -21,9 +29,10 @@ int main()
         {
             if (arr[j] > arr[j + 1])
             {
-                int temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp;
+                // int temp = arr[j];
+                // arr[j] = arr[j + 1];
+                // arr[j + 1] = temp;
+                swap((arr + j), (arr + j + 1));
             }
         }
     }
