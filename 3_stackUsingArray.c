@@ -27,7 +27,8 @@ int pop()
     }
     else
     {
-        int t = stack[tos]; // first of all, put out that value and store it in some constant,then print that constant
+        int t = stack[tos]; // first of all, put out that value and store it in     
+                            //some constant,then print that constant
         tos--;
         return t;
         //printf("%d", &t);

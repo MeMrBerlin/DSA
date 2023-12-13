@@ -39,7 +39,7 @@ int main()
 
     // display the linked list
     nd *x = start;
-    printf("\n---------------------------------------------Linked List-------------------------------------------------\n");
+    printf("\n----------------------Linked List----------------------n");
     printf("start->");
     while (x->link != NULL)
     {
